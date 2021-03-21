@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--    This is our bean -->
+    <bean class="com.springcore.Student" name="firstStudent">
+
+        <!--        here we are using setter / property injection -->
+        <property name="studentId">
+            <value>1001</value>
+        </property>
+
+        <property name="studentName">
+            <value>MeghRaj</value>
+        </property>
+
+        <property name="studentAddress">
+            <value>Rajgarh</value>
+        </property>
+
+    </bean>
+
+</beans>
