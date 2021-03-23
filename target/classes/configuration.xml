@@ -9,17 +9,12 @@
     <bean class="com.springcore.Student" name="firstStudent">
 
         <!--        here we are using setter / property injection -->
-        <property name="studentId">
-            <value>1001</value>
-        </property>
+        <property name="studentId" value="1001" />
 
-        <property name="studentName">
-            <value>MeghRaj</value>
-        </property>
+        <property name="studentName" value="MeghRaj" />
 
-        <property name="studentAddress">
-            <value>Rajgarh</value>
-        </property>
+        <property name="studentAddress" value="Rajgarh" />
+
 
     </bean>
 

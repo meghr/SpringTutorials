@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean class="com.springcore.collections.Employee" name="firstEmployee">
+
+        <!--        here we are using setter / property injection -->
+        <property name="name" value="Meghraj" />
+
+        <!--        injecting List Collection-->
+        <property name="phones">
+            <list>
+                <value>8149550110</value>
+                <value>8149550111</value>
+                <value>8149550112</value>
+                <value>null</value>
+            </list>
+        </property>
+
+        <!--        injecting set Collection-->
+        <property name="addresses">
+            <set>
+                <value>Pune</value>
+                <value>Rajgarh</value>
+            </set>
+        </property>
+
+        <!--        injecting map Collection-->
+        <property name="courses">
+            <map>
+                <entry key="java" value="1 Month"></entry>
+                <entry key="Python" value="2 Month"></entry>
+                <entry key="EJB" value="3 Month"></entry>
+            </map>
+        </property>
+
+
+    </bean>
+
+</beans>
