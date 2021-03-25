@@ -3,8 +3,10 @@ package com.springcore;
 import com.springcore.collections.Employee;
 import com.springcore.constructoreinjection.Addition;
 import com.springcore.constructoreinjection.Person;
+import com.springcore.lifecycle.Samosa;
 import com.springcore.reference.A;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
@@ -59,5 +61,22 @@ public class App {
         Addition addition = (Addition) constuctorContext.getBean("add");
 
         addition.doSum();
+
+        // Life cycle
+        // 1. init and destory method using XML
+        // for calling destroy method we need to use the object of AbstractApplicationContext as this have a registerShutdownHook  method
+
+        AbstractApplicationContext samosaContext = new ClassPathXmlApplicationContext("lifecycle.xml");
+
+        Samosa samosa = (Samosa) samosaContext.getBean("s1");
+
+        System.out.println(samosa.toString());
+
+        // for calling destroy life cycle method
+
+        // this will call the destroy method , to call the method registerShutdownHook we need to use the object of AbstractApplicationContext
+
+        samosaContext.registerShutdownHook();
+
     }
 }
