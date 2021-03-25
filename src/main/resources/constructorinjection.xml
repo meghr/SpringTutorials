@@ -21,7 +21,7 @@
 
     <!--    Removing the ambiguity so we define the type as well -->
     <bean class="com.springcore.constructoreinjection.Addition" name="add">
-        <constructor-arg value="15" type="int"/>
-        <constructor-arg value="19" type="int"/>
+        <constructor-arg value="15" type="int" index="1"/>
+        <constructor-arg value="19" type="int" index="0"/>
     </bean>
 </beans>

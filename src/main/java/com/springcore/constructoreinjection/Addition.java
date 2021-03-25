@@ -28,6 +28,8 @@ public class Addition {
     }
 
     public void doSum(){
+        System.out.println("a value is :" + this.a);
+        System.out.println("b value is :" + this.b);
         System.out.println("Sum is :" + (this.a+this.b));
     }
 }
