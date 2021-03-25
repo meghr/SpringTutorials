@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+        <!--    Constructor Injection for Constructor 1 -->
+
+   <bean class="com.springcore.constructoreinjection.Person" name="person1">
+       <constructor-arg value="Ram" />
+       <constructor-arg value="101" />
+   </bean>
+
+    <!--    Constructor Injection for Constructor 2 -->
+
+    <bean class="com.springcore.constructoreinjection.Person" name="person2">
+        <constructor-arg value="1011" />
+        <constructor-arg value="Hera" />
+    </bean>
+
+    <!--    Removing the ambiguity so we define the type as well -->
+    <bean class="com.springcore.constructoreinjection.Addition" name="add">
+        <constructor-arg value="15" type="int"/>
+        <constructor-arg value="19" type="int"/>
+    </bean>
+</beans>
