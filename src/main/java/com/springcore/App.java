@@ -3,6 +3,7 @@ package com.springcore;
 import com.springcore.collections.Employee;
 import com.springcore.constructoreinjection.Addition;
 import com.springcore.constructoreinjection.Person;
+import com.springcore.lifecycle.Example;
 import com.springcore.lifecycle.Pepsi;
 import com.springcore.lifecycle.Samosa;
 import com.springcore.reference.A;
@@ -70,7 +71,7 @@ public class App {
         AbstractApplicationContext context1 = new ClassPathXmlApplicationContext("lifecycle.xml");
 
         Samosa samosa = (Samosa) context1.getBean("s1");
-
+        System.out.println(samosa.toString());
 
         // for calling destroy life cycle method
 
@@ -78,10 +79,16 @@ public class App {
 
         context1.registerShutdownHook();
 
+
         // 2. init and destroy method using  Interface (InitializingBean, DisposableBean)
 
         Pepsi pepsi = (Pepsi) context1.getBean("p1");
+        System.out.println(pepsi.toString());
 
+        // 3. init and destroy method using  Annotation (@postConstruct, @preDestroy)
 
+        Example example = (Example) context1.getBean("example");
+
+        System.out.println(example.toString());
     }
 }

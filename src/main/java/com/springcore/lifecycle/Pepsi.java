@@ -5,6 +5,8 @@ import org.springframework.beans.factory.InitializingBean;
 
 public class Pepsi implements InitializingBean, DisposableBean {
 
+
+
     private double price;
 
     public Pepsi() {
@@ -23,6 +25,12 @@ public class Pepsi implements InitializingBean, DisposableBean {
         System.out.println("Setting price for Pepsi ::: After this Init will be called");
     }
 
+    @Override
+    public String toString() {
+        return "Pepsi{" +
+                "price=" + price +
+                '}';
+    }
 
         // This method is init inherited from InitializingBean interface
     @Override
