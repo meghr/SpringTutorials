@@ -16,7 +16,7 @@ public class Samosa {
     }
 
     public void setPrice(double price) {
-        System.out.println("Setting price ::: after this Init will be called ");
+        System.out.println("Setting price for Samosa ::: After this Init will be called ");
         this.price = price;
     }
 
@@ -33,11 +33,11 @@ public class Samosa {
 
     // we can put any name for init and destroy method , but we need to use the same name in lifecycle.xml
     public void init(){
-        System.out.println("Inside the init Method");
+        System.out.println("Inside the init Method of Samosa:: Taking  Samosa ");
     }
 
     public void destroy(){
-        System.out.println("Inside the destroy Method");
+        System.out.println("Inside the destroy Method of Samosa:: Dumping the Samosa ");
     }
 
 
