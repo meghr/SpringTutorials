@@ -13,9 +13,14 @@
 
 
         <!--   Depended Bean-->
-        <bean class="com.springcore.autowirebyannotation.Address" name="address">
+        <bean class="com.springcore.autowirebyannotation.Address" name="address1">
         <property name="street" value="MG Road"></property>
             <property name="city" value="Pune"></property>
+        </bean>
+
+        <bean class="com.springcore.autowirebyannotation.Address" name="address2">
+                <property name="street" value="Main Road"></property>
+                <property name="city" value="Delhi"></property>
         </bean>
 
         <bean class="com.springcore.autowirebyannotation.Emp" name="emp1">

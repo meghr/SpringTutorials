@@ -1,10 +1,12 @@
 package com.springcore.autowirebyannotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Emp {
 
-    @Autowired
+    /*@Autowired
+    @Qualifier("address2")*/
     private Address address;
 
     // Default Constructor
@@ -12,7 +14,8 @@ public class Emp {
     System.out.println("Inside Default Constructor of EMP");
     }
 
-    @Autowired
+    // @Autowired
+    // Qualifier can not be used with constructor
     public Emp(Address address) {
         System.out.println("Inside Parameterised  Constructor of Emp");
         this.address = address;
@@ -23,6 +26,7 @@ public class Emp {
     }
 
     @Autowired
+    @Qualifier("address2")
     public void setAddress(Address address) {
         System.out.println("Inside EMP setting address");
         this.address = address;
