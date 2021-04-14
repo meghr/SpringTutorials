@@ -3,6 +3,8 @@ package com.springcore.streotype;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+
 @Component
 public class Student {
 
@@ -11,12 +13,17 @@ public class Student {
     @Value("Rajgarh")
     private String city;
 
+    // passing list using Value tag
+    @Value("#{address}")
+    private ArrayList<String> address;
+
     public Student() {
         super();
     }
-    public Student(String studentName, String city) {
+    public Student(String studentName, String city, ArrayList<String> address) {
         this.studentName = studentName;
         this.city = city;
+        this.address = address;
     }
 
 
@@ -39,11 +46,20 @@ public class Student {
     }
 
 
+    public ArrayList<String> getAddress() {
+        return address;
+    }
+
+    public void setAddress(ArrayList<String> address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "studentName='" + studentName + '\'' +
                 ", city='" + city + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 

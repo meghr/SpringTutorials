@@ -12,6 +12,12 @@
 
     <context:component-scan base-package="com.springcore.streotype" />
 
+    <util:list list-class="java.util.ArrayList" id="address">
+        <value>"Rajgarh"</value>
+        <value>"Churu"</value>
+        <value>"Pilani"</value>
+    </util:list>
+
 
 
 
